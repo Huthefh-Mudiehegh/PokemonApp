@@ -4,27 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.mainActivity.MainActivity">
-
+    tools:context=".ui.favPokemon.FavPokemon">
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/main_pokemons_recycler"
+        android:id="@+id/fav_pokemons_recycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/pokemon_list_design"/>
-    <Button
-        android:id="@+id/main_fav_btn"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_50sdp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_margin="@dimen/_4sdp"
-        android:text="Favorite"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textStyle="bold"
-
-
-        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

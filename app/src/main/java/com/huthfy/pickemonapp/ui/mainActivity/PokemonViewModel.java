@@ -3,6 +3,7 @@ package com.huthfy.pickemonapp.ui.mainActivity;
 import android.util.Log;
 
 import androidx.hilt.lifecycle.ViewModelInject;
+import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
@@ -11,6 +12,7 @@ import com.huthfy.pickemonapp.model.PokemonResponse;
 import com.huthfy.pickemonapp.repo.PokemonRepo;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
 import io.reactivex.rxjava3.functions.Function;
@@ -19,6 +21,7 @@ import io.reactivex.rxjava3.schedulers.Schedulers;
 public class PokemonViewModel extends ViewModel {
     private static final String TAG = "get_pokemons_state";
     private MutableLiveData<ArrayList<Pokemon>> pokemonsLivedata = new MutableLiveData<>();
+
     PokemonRepo pokemonRepo;
 
     @ViewModelInject
@@ -54,4 +57,6 @@ public class PokemonViewModel extends ViewModel {
     public MutableLiveData<ArrayList<Pokemon>> getPokemonsLivedata() {
         return pokemonsLivedata;
     }
+
+
 }

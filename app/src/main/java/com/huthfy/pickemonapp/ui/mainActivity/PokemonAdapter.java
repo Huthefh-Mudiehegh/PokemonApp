@@ -39,6 +39,7 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.PokemonV
         //third party library for images
         Glide.with(context).load(item.getUrl()).into(holder.pokemonImage);
         holder.pokemonName.setText(item.getName());
+        holder.pokemonId.setText(item.getId()+"");
 
     }
 
@@ -53,14 +54,20 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.PokemonV
         notifyDataSetChanged();
     }
 
+    // get pokemon
+    public Pokemon getPokemonAt(int position){
+        return arrayList.get(position);
+    }
+
     class PokemonViewHolder extends RecyclerView.ViewHolder {
 
         ImageView pokemonImage;
-        TextView pokemonName;
+        TextView pokemonName,pokemonId;
         public PokemonViewHolder(@NonNull View itemView) {
             super(itemView);
             pokemonImage = itemView.findViewById(R.id.pokemon_img);
             pokemonName = itemView.findViewById(R.id.pokemon_name);
+            pokemonId = itemView.findViewById(R.id.pokemon_id);
 
         }
     }
